@@ -17,59 +17,112 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Шапка */
-header {
-    padding: 3rem 0 2rem;
-    text-align: center;
-    border-bottom: 1px solid #e2e8f0;
-    margin-bottom: 3rem;
+.site-header {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
 }
 
 .site-title {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+}
+
+.site-title a {
     color: #1e40af;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.site-title a:hover {
+    color: #3b82f6;
 }
 
 .site-subtitle {
     font-size: 1rem;
     color: #64748b;
     font-weight: 400;
+    margin-bottom: 1rem;
 }
 
-/* Введение */
-.intro {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 4rem;
+.breadcrumb {
+    font-size: 0.9rem;
+    color: #64748b;
+    padding: 0.5rem 0;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 1rem;
 }
 
-.intro h1 {
+.breadcrumb a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Основной контент */
+.main-content {
+    flex: 1;
+}
+
+.page-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-title {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
     color: #1e293b;
 }
 
-.intro-content {
+.page-body {
     font-size: 1.1rem;
-    color: #475569;
     line-height: 1.7;
+    color: #475569;
+    margin-bottom: 3rem;
+}
+
+.page-body h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: #334155;
+}
+
+.page-body h3 {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 0.75rem;
+    color: #475569;
+}
+
+.page-body ul, .page-body ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-body li {
+    margin-bottom: 0.5rem;
 }
 
 /* Навигация */
-.navigation {
-    margin-bottom: 4rem;
+.navigation-grid {
+    margin: 3rem 0;
 }
 
 .nav-section {
     margin-bottom: 3rem;
 }
 
-.nav-section h2 {
+.section-title {
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
@@ -114,13 +167,45 @@ header {
     color: #64748b;
 }
 
+/* Кнопка "Назад" */
+.back-button {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.btn-back:hover {
+    background: #2563eb;
+}
+
 /* Подвал */
-footer {
+.site-footer {
     padding: 2rem 0;
     border-top: 1px solid #e2e8f0;
     text-align: center;
     color: #94a3b8;
     font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
+.site-footer a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
 }
 
 /* Адаптивность */
@@ -137,7 +222,11 @@ footer {
         grid-template-columns: 1fr;
     }
     
-    .intro h1 {
+    .page-title {
         font-size: 1.7rem;
+    }
+    
+    .page-body {
+        font-size: 1rem;
     }
 }

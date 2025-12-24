@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About this Website</title>
+    <title>About this Website - Портфолио</title>
     <link href="../static/css/styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,17 +12,46 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1 class="site-title">Академическое портфолио</h1>
+        <header class="site-header">
+            <h1 class="site-title">
+                <a href="../">Академическое портфолио</a>
+            </h1>
             <p class="site-subtitle">Собрание учебных работ</p>
+
+            
+            <nav class="breadcrumb">
+                <a href="../">Главная</a> →
+                <span>About this Website</span>
+            </nav>
+            
         </header>
 
-        <main>
+        <main class="main-content">
             
+    <article class="page-content">
+        <h1 class="page-title">About this Website</h1>
+
+        <div class="page-body">
+            <p>This is a website that was made with the Lektor quickstart.</p>
+<p>And it does not contain a lot of information.</p>
+
+        </div>
+
+        
+
+        <!-- Кнопка "Назад" на внутренних страницах -->
+        
+        <div class="back-button">
+            <a href="../" class="btn-back">← Назад к разделам</a>
+        </div>
+        
+    </article>
+
         </main>
 
-        <footer>
-            <p>© 2024 Академическое портфолио</p>
+        <footer class="site-footer">
+            <p>© 2025 Академическое портфолио</p>
+            <p><a href="../">Вернуться на главную</a></p>
         </footer>
     </div>
 </body>
